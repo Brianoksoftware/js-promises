@@ -47,15 +47,27 @@ watchTutorialPromise().then((message) => {
 
 
 //Example 3
+
 const recVideoOne = new Promise((resolve, reject) => {
-    console.log("video one recorded");
+    resolve("video one recorded");
 });
 
 const recVideoTwo = new Promise((resolve, reject) => {
-    console.log("video two recorded");
+    resolve("video two recorded");
 });
 
 const recVideothree = new Promise((resolve, reject) => {
-    console.log("video three recorded");
+    resolve("video three recorded");
 });
+
+Promise.race([
+    recVideoOne,
+    recVideoTwo,
+    recVideothree
+]).then((x) => {
+    console.log(x)
+}).catch()
+    
+
+
 
