@@ -43,3 +43,19 @@ watchTutorialPromise().then((message) => {
 }).catch((error) => {
     console.log(error.name + '' + error.message);
 })
+
+
+
+//Example 3
+const recVideoOne = new Promise((resolve, reject) => {
+    console.log("video one recorded");
+});
+
+const recVideoTwo = new Promise((resolve, reject) => {
+    console.log("video two recorded");
+});
+
+const recVideothree = new Promise((resolve, reject) => {
+    console.log("video three recorded");
+});
+
