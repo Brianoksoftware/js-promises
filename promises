@@ -47,7 +47,28 @@ watchTutorialPromise().then((message) => {
 
 
 //Example 3
+const recVideoKwanza = new Promise((resolve, reject) => {
+    resolve("video kwanza recorded");
+});
 
+const recVideoPili = new Promise((resolve, reject) => {
+    resolve("video pili recorded");
+});
+
+const recVideoTatu = new Promise((resolve, reject) => {
+    resolve("video tatu recorded");
+});
+
+Promise.all([
+    recVideoKwanza,
+    recVideoPili,
+    recVideoTatu
+]).then((x) => {
+    console.log(x)
+}).catch()
+
+    
+//Example 4
 const recVideoOne = new Promise((resolve, reject) => {
     resolve("video one recorded");
 });
@@ -68,6 +89,7 @@ Promise.race([
     console.log(x)
 }).catch()
     
+
 
 
 
